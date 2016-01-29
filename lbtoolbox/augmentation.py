@@ -21,7 +21,7 @@ class AugmentationPipeline(object):
 
         - `augmenters` is a list of instances of implementations of `Augmenter`.
         """
-        self.augmenters = augmenters
+        self.augmenters = list(augmenters)
 
         for a in self.augmenters:
             a.fit(Xtr, ytr)
